@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { LoginForm } from '../components/auth/LoginForm'
+import { LoginIllustration } from '../components/auth/LoginIllustration'
 
 export function Login() {
   return (
@@ -13,9 +15,9 @@ export function Login() {
         <section className="order-2 mx-auto w-full max-w-[579px] min-w-0 text-cloud lg:order-1 lg:pl-0.5" aria-labelledby="login-intro">
           <h2 id="login-intro" className="font-heading text-xl font-semibold leading-6 tracking-[-0.01em]">Sign in with ease</h2>
           <p className="mt-4 max-w-[475px] text-lg leading-[29px]">Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge.</p>
-          <div className="mt-10 lg:mt-[87px]">here will be added login isllustration</div>
+          <div className="mt-10 lg:mt-[87px]"><LoginIllustration /></div>
         </section>
-        <div className="order-1 mx-auto min-w-0 w-full max-w-[579px] lg:order-2">Here the login form will be added</div>
+        <div className="order-1 mx-auto min-w-0 w-full max-w-[579px] lg:order-2"><LoginForm /></div>
       </main>
     </div>
   )

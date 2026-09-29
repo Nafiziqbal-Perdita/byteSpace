@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { heroAssets } from '../data/assets'
 import { Logo } from './ui'
 
@@ -26,7 +27,7 @@ export function Header({
           <a href="#creators">Creators</a>
         </nav>
         <div className="[&_button:hover]:text-lime max-[1024px]:gap-4! max-[768px]:hidden! flex items-center gap-6 text-base text-cloud">
-          <button onClick={() => onAction('signin')}>Sign In</button>
+          <Link to="/login">Sign In</Link>
           <button onClick={() => onAction('join')}>Join Us</button>
           <button
             className="flex size-6 items-center justify-center"
@@ -73,15 +74,9 @@ export function Header({
           <a href="#creators" onClick={close}>
             Creators
           </a>
-          <button
-            className="text-left"
-            onClick={() => {
-              close()
-              onAction('signin')
-            }}
-          >
+          <Link to="/login" className="text-left" onClick={close}>
             Sign In
-          </button>
+          </Link>
           <button
             className="text-left"
             onClick={() => {
