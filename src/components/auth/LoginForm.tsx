@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Button } from '../ui'
 
 export function LoginForm() {
@@ -42,10 +43,7 @@ export function LoginForm() {
         </div>
         <p className="text-center text-base leading-[26px] text-[#888]">
           New user?{' '}
-          <a href="#create-account" onClick={(event) => {
-            event.preventDefault()
-            setMessage('Account registration is not connected in this demo.')
-          }} className="text-blue hover:underline focus-visible:outline-2 focus-visible:outline-blue">Create an account</a>
+          <Link to="/register" className="text-blue hover:underline focus-visible:outline-2 focus-visible:outline-blue">Create an account</Link>
         </p>
       </div>
       <p role="status" className="mt-3 text-center text-xs text-secondary empty:mt-0 lg:absolute lg:inset-x-6 lg:bottom-3 lg:mt-0">{message}</p>
