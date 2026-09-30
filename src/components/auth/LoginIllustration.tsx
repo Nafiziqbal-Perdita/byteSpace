@@ -4,15 +4,6 @@ import { Ornament } from '../Ornaments'
 import { StudentsPanel } from '../ui'
 
 const asset = (name: string) => `/assets/login/${name}`
-const cardAssets = {
-  imgEllipse: asset('imgEllipse.png'),
-  imgEllipse1: asset('imgEllipse1.png'),
-  imgEllipse2: asset('imgEllipse2.png'),
-  imgEllipse3: asset('imgEllipse3.png'),
-  imgEllipse4: asset('imgEllipse4.svg'),
-  imgSignalCellularAlt: asset('imgSignalCellularAlt.svg'),
-  imgStyleOutlined: asset('imgStyleOutlined.svg'),
-}
 
 export function LoginIllustration() {
   return (
@@ -23,7 +14,7 @@ export function LoginIllustration() {
           { title: 'the Power of Big Data', image: 'imgFrame3.png', position: 'left-[136px] top-0' },
         ].map(({ title, image, position }) => (
           <div key={title} className={`absolute ${position} [&_.course-image-labels]:leading-5 [&_.course-body>div>p]:leading-5 [&_.course-body>div:nth-child(2)>span]:leading-5`}>
-            <CourseCard decorative decorativeImage={asset(image)} cardAssets={cardAssets} course={{ id: image, title, image: asset(image), categories: [] }} />
+            <CourseCard decorative course={{ id: image, title, image: asset(image), categories: [] }} />
           </div>
         ))}
         <StudentsPanel feature className="absolute left-[251px] top-[435px] bg-lime! [&>div:first-of-type]:h-4 [&_.avatar-count>span]:text-cloud" images={Array.from({ length: 7 }, (_, index) => asset(`imgEllipse${index + 5}.png`))} badge={asset('imgEllipse12.svg')} star={asset('imgStar.svg')} />
